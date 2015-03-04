@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-#export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="sunrise"
+ZSH_THEME="sunrise"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -48,40 +48,20 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-#plugins=(gitfast ruby brew coffee composer osx symfony2 bower gem git-extras mvn phing vagrant rvm web-search)
+plugins=(gitfast ruby brew coffee composer osx symfony2 bower gem git-extras mvn phing vagrant rvm web-search battery grunt)
 
-#source $ZSH/oh-my-zsh.sh
-source $HOME/.dotfiles/antigen/antigen.zsh
-antigen use oh-my-zsh
-antigen bundle gitfast
-antigen bundle ruby
-antigen bundle brew
-antigen bundle coffee
-antigen bundle composer
-antigen bundle osx
-antigen bundle symfony2
-antigen bundle bower
-antigen bundle gem
-antigen bundle git-extras
-antigen bundle mvn
-antigen bundle phing
-antigen bundle vagrant
-antigen bundle rvm
-antigen bundle web-search
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle jocelynmallon/zshmarks
-
-antigen theme sunrise
-
-antigen apply
+source $ZSH/oh-my-zsh.sh
 
 autoload bashcompinit
 bashcompinit
 source $HOME/.dotfiles/drush.complete.sh
 
+#homebrew path fix for 10.10.2
+export PATH="$PATH:/usr/local/sbin"
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
