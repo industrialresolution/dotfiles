@@ -56,8 +56,6 @@ brew_expand_alias() {
   brew info "$1" 2>/dev/null | head -1 | awk '{gsub(/:/, ""); print $1}'
 }
 
-append_to_zshrc 'export PATH="$HOME/.bin:$PATH"'
-
 case "$SHELL" in
   */zsh) : ;;
   *)
@@ -71,9 +69,6 @@ if ! command -v brew >/dev/null; then
     curl -fsS \
       'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
 
-    append_to_zshrc '# recommended by brew doctor'
-    append_to_zshrc 'export PATH="/usr/local/bin:$PATH"' 1
-
     export PATH="/usr/local/bin:$PATH"
 else
   fancy_echo "Homebrew already installed. Skipping ..."
@@ -82,4 +77,7 @@ fi
 fancy_echo "Updating Homebrew formulas ..."
 brew update
 
+fancy_echo "Installing development software..."
 brew_install_or_upgrade 'git'
+brew_install_or_upgrade 'composer'
+brew_install_or_upgrade 'node'

@@ -57,7 +57,7 @@ bashcompinit
 source $HOME/.bin/drush.complete.sh
 
 #homebrew path fix for 10.10.2
-export PATH="$PATH:/usr/local/sbin"
+export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
