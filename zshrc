@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 
 autoload bashcompinit
 bashcompinit
-source $HOME/.dotfiles/drush.complete.sh
+source $HOME/.bin/drush.complete.sh
 
 #homebrew path fix for 10.10.2
 export PATH="$PATH:/usr/local/sbin"
@@ -69,4 +69,4 @@ export PATH="$PATH:/usr/local/sbin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export rvm_ignore_dotfiles=yes
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.bin:$HOME/.rvm/bin" # Add RVM to PATH for scripting
