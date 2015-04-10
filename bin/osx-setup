@@ -102,4 +102,5 @@ brew_install_or_upgrade 'composer'
 brew_install_or_upgrade 'node'
 brew_install_or_upgrade 'caskroom/cask/brew-cask'
 cask_install 'vagrant'
+cask_install 'pgadmin3'
 composer self-update
