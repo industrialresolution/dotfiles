@@ -40,6 +40,11 @@ brew_install_or_upgrade() {
   fi
 }
 
+cask_install() {
+  fancy_echo "Installing %s ..." "$1"
+  brew cask install "$@"
+}
+
 brew_is_installed() {
   local name="$(brew_expand_alias "$1")"
 
@@ -81,3 +86,5 @@ fancy_echo "Installing development software..."
 brew_install_or_upgrade 'git'
 brew_install_or_upgrade 'composer'
 brew_install_or_upgrade 'node'
+brew_install_or_upgrade 'caskroom/cask/brew-cask'
+cask_install 'vagrant'
