@@ -61,6 +61,10 @@ brew_expand_alias() {
   brew info "$1" 2>/dev/null | head -1 | awk '{gsub(/:/, ""); print $1}'
 }
 
+brew_tap() {
+  brew tap "$1" 2> /dev/null
+}
+
 case "$SHELL" in
   */zsh) : ;;
   *)
@@ -82,9 +86,20 @@ fi
 fancy_echo "Updating Homebrew formulas ..."
 brew update
 
+if ! command -v rcup >/dev/null; then
+  brew_tap 'thoughtbot/formulae'
+  brew_install_or_upgrade 'rcm'
+fi
+
 fancy_echo "Installing development software..."
 brew_install_or_upgrade 'git'
+brew_tap 'homebrew/dupes'
+brew_tap 'homebrew/versions'
+brew_tap 'homebrew/homebrew-php'
+brew_install_or_upgrade 'php54'
+brew_install_or_upgrade 'php54-xdebug'
 brew_install_or_upgrade 'composer'
 brew_install_or_upgrade 'node'
 brew_install_or_upgrade 'caskroom/cask/brew-cask'
 cask_install 'vagrant'
+composer self-update
