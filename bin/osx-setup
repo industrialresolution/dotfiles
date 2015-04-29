@@ -102,6 +102,7 @@ brew_install_or_upgrade 'php54-xdebug'
 brew_install_or_upgrade 'composer'
 brew_install_or_upgrade 'node'
 brew_install_or_upgrade 'caskroom/cask/brew-cask'
+brew_install_or_upgrade 'gnu-tar'
 cask_install 'vagrant'
 cask_install 'pgadmin3'
 composer self-update
