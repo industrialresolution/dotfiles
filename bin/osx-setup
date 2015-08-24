@@ -108,4 +108,6 @@ cask_install 'pgadmin3'
 cask_install 'java'
 cask_install 'intellij-idea'
 cask_install 'sourcetree'
+cask_install 'atom'
+cask_install 'libreoffice'
 composer self-update
