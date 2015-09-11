@@ -65,8 +65,3 @@ export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-# load rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-export rvm_ignore_dotfiles=yes
-export PATH="$PATH:$HOME/.bin:$HOME/.rvm/bin" # Add RVM to PATH for scripting
