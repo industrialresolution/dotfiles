@@ -48,7 +48,10 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(aws gitfast ruby brew coffee composer osx symfony2 bower gem git-extras mvn phing vagrant rvm web-search battery grunt)
+plugins=(aws gitfast ruby brew coffee composer osx symfony2 bower gem git-extras mvn phing vagrant web-search battery grunt)
+
+# Local config - moved here to give you a chance to override global options
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 source $ZSH/oh-my-zsh.sh
 
