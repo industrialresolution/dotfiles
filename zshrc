@@ -65,6 +65,8 @@ export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
 
 eval "$(rbenv init -)"
 
+export GIT_SSH=$HOME/.bin/ssh-git.sh
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
