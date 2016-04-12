@@ -61,7 +61,7 @@ source $HOME/.bin/drush.complete.sh
 
 #homebrew path fix for 10.10.2
 #added rbenv to path
-export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
+export PATH="$HOME/.bin:/usr/local/bin:$PATH:/usr/local/sbin"
 
 eval "$(rbenv init -)"
 
