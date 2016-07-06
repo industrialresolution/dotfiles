@@ -1,1 +1,2 @@
 alias pc="php app/console"
+alias gpg="gpg2"

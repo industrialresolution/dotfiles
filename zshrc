@@ -61,7 +61,7 @@ source $HOME/.bin/drush.complete.sh
 
 #homebrew path fix for 10.10.2
 #added rbenv to path
-export PATH="$HOME/.bin:/usr/local/bin:$PATH:/usr/local/sbin"
+export PATH="$HOME/.bin:$HOME/.pyenv/shims:/usr/local/bin:$PATH:/usr/local/sbin"
 
 eval "$(rbenv init -)"
 
@@ -70,6 +70,3 @@ export GIT_SSH=$HOME/.bin/ssh-git.sh
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
-# Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
