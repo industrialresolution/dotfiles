@@ -109,6 +109,7 @@ brew_install_or_upgrade 'pyenv-virtualenv'
 brew_install_or_upgrade 'postgresql'
 
 cask_install 'atom'
+cask_install 'avira-antivirus'
 cask_install 'filezilla'
 cask_install 'firefox'
 cask_install 'google-chrome'
