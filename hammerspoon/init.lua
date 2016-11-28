@@ -11,7 +11,14 @@ movementKeys = {"cmd", "ctrl", "option"}
 displayKeys = {"cmd", "ctrl", "shift"}
 
 -- Imports
-require "local"
+
+--- This is a hack to avoid crashing if a module doesn't exist
+local function requiref(module)
+    require(module)
+end
+
+pcall(requiref,"local")
+
 require "normal"
 require "pomodoro"
 
