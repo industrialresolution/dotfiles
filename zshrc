@@ -68,6 +68,8 @@ eval "$(rbenv init -)"
 
 export GIT_SSH=$HOME/.bin/ssh-git.sh
 
+source ~/.iterm2_shell_integration.zsh
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
